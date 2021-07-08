@@ -6,5 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  searchTerm='';
+  isCollapsed=true;
   title = 'Angularamazona';
+   
+  get token(){
+    return localStorage.getItem('token');
+  }
+
+  collapse(){
+    this.isCollapsed=true;
+  }
+
+  closeDropdown(dropdown){
+    dropdown.close();
+  }
+
+  logout(){
+
+  }
+
+  search(){
+    
+  }
 }
